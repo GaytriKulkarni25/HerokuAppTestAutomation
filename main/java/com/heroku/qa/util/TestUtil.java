@@ -4,12 +4,11 @@ import com.heroku.qa.base.TestBase;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
 
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 public class TestUtil extends TestBase {
     public static long PAGE_LOAD_TIMEOUT = 30;
@@ -54,5 +53,10 @@ public class TestUtil extends TestBase {
 
 
         return new String[][]{{username,password}};
+    }
+
+    public static void implicitWaitForElement(int t)
+    {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(t));
     }
 }

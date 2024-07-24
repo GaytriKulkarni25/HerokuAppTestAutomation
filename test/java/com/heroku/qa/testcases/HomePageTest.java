@@ -57,6 +57,7 @@ public class HomePageTest extends TestBase {
         home.basicAuthLogin(username,password);
     }
 
+
     @AfterMethod
     public void tearDown() {
         driver.quit();
