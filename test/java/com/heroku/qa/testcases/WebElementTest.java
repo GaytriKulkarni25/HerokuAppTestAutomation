@@ -6,6 +6,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class WebElementTest extends TestBase {
 
     WebElementDemo elePage;
@@ -26,12 +28,19 @@ public class WebElementTest extends TestBase {
     public void TestScenarios()
     {
         //verify checkboxes
-        elePage.verifyCheckboxes();
+        //elePage.verifyCheckboxes();
+        //verify dropdown
+        //elePage.verifyDropdown();
+        //verify drag and drop
+        //elePage.dragAndDrop();
+        //file upload
+        elePage.fileUpload();
+
     }
 
     @AfterMethod
     public void tearDown()
     {
-        driver.quit();
+        //driver.quit();
     }
 }
