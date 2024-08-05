@@ -44,7 +44,7 @@ public class HomePage extends TestBase {
         abtesting.click();
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
        String titleText= tagH3.getText();
-        Assert.assertEquals(titleText,"A/B Test Variation 1");
+        Assert.assertEquals(titleText,"A/B Test Control");
     }
 
 

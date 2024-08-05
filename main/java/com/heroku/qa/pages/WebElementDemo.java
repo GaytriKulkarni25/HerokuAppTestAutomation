@@ -13,21 +13,16 @@ import java.io.File;
 
 public class WebElementDemo extends TestBase {
 
-
-
     @FindBy(linkText="Checkboxes")
     WebElement checkboxLink;
     @FindBy(xpath="(//input[@type='checkbox'])[1]")
     WebElement  checkbox1;
     @FindBy(xpath="(//input[@type='checkbox'])[2]")
     WebElement  checkbox2;
-
     @FindBy(linkText="Dropdown")
     WebElement dropdownLink;
     @FindBy(id="dropdown")
     WebElement dropDown;
-
-
     @FindBy(xpath="(//header)[1]")
     WebElement headerTag1;
     @FindBy(xpath="(//header)[2]")
