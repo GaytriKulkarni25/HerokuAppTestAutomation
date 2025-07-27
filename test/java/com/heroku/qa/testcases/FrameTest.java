@@ -6,7 +6,9 @@ import com.heroku.qa.pages.framePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class FrameTest extends TestBase {
@@ -17,7 +19,7 @@ public class FrameTest extends TestBase {
     }
 
 
-    @BeforeMethod
+    @BeforeTest
     public void setup()
     {
         initialization();
@@ -29,6 +31,7 @@ public class FrameTest extends TestBase {
          elePage.frameOps();
     }
 
+    @AfterTest
     public void tearDown()
     {
         //driver.quit();
