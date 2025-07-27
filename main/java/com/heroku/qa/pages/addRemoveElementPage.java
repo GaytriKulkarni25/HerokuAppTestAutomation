@@ -41,7 +41,7 @@ public class addRemoveElementPage extends TestBase {
          else
              System.out.println("delete button  not found"+ delButtons.size());
         deleteButton.click();
-       
+
 
     }
 

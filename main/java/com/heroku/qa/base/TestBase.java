@@ -1,7 +1,9 @@
 package com.heroku.qa.base;
 
 import com.heroku.qa.util.TestUtil;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.FileInputStream;
@@ -47,5 +49,15 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT,TimeUnit.SECONDS);
         driver.get(prop.getProperty("url"));
     }
+
+    public static void executeJS(WebElement element) {
+
+        JavascriptExecutor js= (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true)",element);
+       // js.executeScript("arguments[0].click()",element);
+    }
+
+
+
 
 }
