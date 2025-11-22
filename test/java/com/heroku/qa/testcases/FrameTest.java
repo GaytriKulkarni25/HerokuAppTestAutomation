@@ -34,7 +34,7 @@ public class FrameTest extends TestBase {
     @AfterTest
     public void tearDown()
     {
-        //driver.quit();
+        driver.quit();
     }
 
 }

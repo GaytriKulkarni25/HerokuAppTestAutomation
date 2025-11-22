@@ -42,7 +42,7 @@ public class HomePage extends TestBase {
     public void ABTestingLinkVerification()
     {
         abtesting.click();
-        driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
        String titleText= tagH3.getText();
         Assert.assertEquals(titleText,"A/B Test Control");
     }
